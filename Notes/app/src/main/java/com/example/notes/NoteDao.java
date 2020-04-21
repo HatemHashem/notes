@@ -12,7 +12,7 @@ import androidx.room.Update;
 @Dao
 public interface NoteDao {
     @Insert
-     void insert(Note note);
+    void insert(Note note);
 
     @Update
     void update(Note note);
@@ -22,8 +22,9 @@ public interface NoteDao {
 
     @Query("DELETE FROM note_table")
     void deleteAllNotes();
+
     @Query("SELECT * FROM note_table ORDER BY priority DESC")
-    LiveData<List<Note>>getAllNotes();
+    LiveData<List<Note>> getAllNotes();
 
 
 }
